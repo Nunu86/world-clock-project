@@ -1,6 +1,17 @@
-body {
+.border {
   max-width: 50%;
   margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  background: #8f8787;
+}
+h1 {
+  text-align: center;
+  margin-top: 18px;
+  color: 00000;
+  font-family: sans-serif;
+  text-transform: uppercase;
 }
 #cityLabel {
   display: block;
@@ -8,6 +19,7 @@ body {
   text-align: center;
   min-width: 75%;
   padding: 10px;
+  border-radius: 5px;
 }
 
 .container {
@@ -23,6 +35,7 @@ body {
   margin-top: 18px;
   margin-left: 10px;
   font-size: 32px;
+  font-family: sans-serif;
 }
 .flag-emoji {
   padding: 3px;
@@ -30,14 +43,99 @@ body {
 .date {
   margin-top: 5px;
   margin-left: 10px;
+  font-family: sans-serif;
+  opacity: 0.7;
 }
 .time {
   display: flex;
   justify-content: right;
   position: relative;
-  bottom: 39px;
+  bottom: 43px;
   right: 15px;
   font-size: 29px;
+}
+.time small {
+  font-size: 16px;
+  font-weight: 900;
+  position: relative;
+  top: 8px;
+}
+.container2 {
+  border-bottom: 1px solid #ebcbae;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px #8f8787;
+  padding: 5px;
+  background-color: #ffe79a;
+  position: relative;
+  top: 46px;
+}
+.city-name2 {
+  margin-top: 18px;
+  margin-left: 10px;
+  font-size: 32px;
+  font-family: sans-serif;
+}
+.flag-emoji2 {
+  padding: 3px;
+}
+.date2 {
+  margin-top: 5px;
+  margin-left: 10px;
+  font-family: sans-serif;
+  opacity: 0.7;
+}
+.time2 {
+  display: flex;
+  justify-content: right;
+  position: relative;
+  bottom: 43px;
+  right: 15px;
+  font-size: 29px;
+}
+.small2 {
+  font-size: 16px;
+  font-weight: 900;
+  position: relative;
+  top: 8px;
+}
+.container3 {
+  border-bottom: 1px solid #ebcbae;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px #8f8787;
+  padding: 5px;
+  background-color: #ffe79a;
+  position: relative;
+  top: 58px;
+  margin-bottom: 20px;
+}
+.city-name3 {
+  margin-top: 18px;
+  margin-left: 10px;
+  font-size: 32px;
+  font-family: sans-serif;
+}
+.flag-emoji3 {
+  padding: 3px;
+}
+.date3 {
+  margin-top: 5px;
+  margin-left: 10px;
+  font-family: sans-serif;
+  opacity: 0.7;
+}
+.time3 {
+  display: flex;
+  justify-content: right;
+  position: relative;
+  bottom: 43px;
+  right: 15px;
+  font-size: 29px;
+}
+.small3 {
+  font-size: 16px;
+  font-weight: 900;
+  position: relative;
+  top: 8px;
 }
 footer {
   text-align: center;
