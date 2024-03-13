@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>World Clock Project-Chi Okorie</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
@@ -20,23 +22,25 @@
         <div class="city-name">
           Los angeles<span class="flag-emoji">🇺🇸</span>
         </div>
-        <div class="date">August 15th 2022</div>
+        <div class="date"></div>
         <div class="time">1:48:15 <small>AM</small></div>
       </div>
 
       <div class="container2">
         <div class="city-name2">Paris<span class="flag-emoji2">🇫🇷</span></div>
-        <div class="date2">August 15th 2022</div>
-        <div class="time2">1:48:15 <small class="small2">AM</small></div>
+        <div class="date2"></div>
+        <div class="time2">
+          1:48:15 <small class="small2" id="parisSmall">AM</small>
+        </div>
       </div>
       <div class="container3">
         <div class="city-name3">Nigeria<span class="flag-emoji3">🇳🇬</span></div>
-        <div class="date3">August 15th 2022</div>
+        <div class="date3"></div>
         <div class="time3">1:48:15 <small class="small3">AM</small></div>
       </div>
       <footer>
-        This project was coded with 💟 by<strong>Chinonye Okorie</strong> and is
-        open sourced on
+        This project was coded with 💟 by <strong>Chinonye Okorie</strong> and
+        is open sourced on
         <a href="https://github.com/Nunu86/world-clock-project" target="blank"
           >GITHub</a
         >

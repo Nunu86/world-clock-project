@@ -54,7 +54,7 @@ h1 {
   right: 15px;
   font-size: 29px;
 }
-.time small {
+small {
   font-size: 16px;
   font-weight: 900;
   position: relative;
@@ -106,7 +106,7 @@ h1 {
   background-color: #ffe79a;
   position: relative;
   top: 58px;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 .city-name3 {
   margin-top: 18px;
@@ -139,4 +139,8 @@ h1 {
 }
 footer {
   text-align: center;
+  position: relative;
+  font-size: 12px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
