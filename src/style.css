@@ -29,7 +29,7 @@ h1 {
   padding: 5px;
   background-color: #ffe79a;
   position: relative;
-  top: 35px;
+  top: 25px;
 }
 .city-name {
   margin-top: 18px;
@@ -67,7 +67,7 @@ small {
   padding: 5px;
   background-color: #ffe79a;
   position: relative;
-  top: 46px;
+  top: 35px;
 }
 .city-name2 {
   margin-top: 18px;
@@ -105,7 +105,7 @@ small {
   padding: 5px;
   background-color: #ffe79a;
   position: relative;
-  top: 58px;
+  top: 45px;
   margin-bottom: 60px;
 }
 .city-name3 {
@@ -139,8 +139,8 @@ small {
 }
 footer {
   text-align: center;
-  position: relative;
   font-size: 12px;
+  position: relative;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
