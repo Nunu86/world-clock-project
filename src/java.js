@@ -29,28 +29,27 @@ setInterval(runDate, 1000);
 
 function revealCities(event) {
   let displayEvent = event.target.value;
-  if (displayEvent === "current") {
+  if (displayEvent === "currentLocation") {
     displayEvent = moment.tz.guess();
   }
   let countryName = displayEvent.split("/");
   cityName = countryName[1];
-  function checkCount() {
-    let cityTimezone = moment().tz(displayEvent);
 
-    let replaceContent = document.querySelector("#bigContainer");
+  let cityTimezone = moment().tz(displayEvent);
 
-    replaceContent.innerHTML = `<div class="city-name">
-            ${cityName} 
+  let replaceContent = document.querySelector("#bigContainer");
+
+  replaceContent.innerHTML = `
+          <div class="city-name">
+             ${cityName}
           </div>
-          <div class="date"> ${cityTimezone.format("MMMM Do, YYYY")}</div>
-          <div class="time"> ${cityTimezone.format(
+          <div class="date">${cityTimezone.format("MMMM Do, YYYY")}</div>
+          <div class="time">${cityTimezone.format(
             "hh:mm:ss"
-          )}  <small>${cityTimezone.format(
-      "A"
-    )}</small></div> <a href="/" id="back">Go back</a>`;
-    return `replaceContent.innerHTML`;
-  }
-  setInterval(checkCount, 1000);
+          )}<small>${cityTimezone.format(
+    "A"
+  )}</small></div><a href="/" id="back">Go back</a>
+        `;
 }
 
 let selectTab = document.querySelector("#cityLabel");
