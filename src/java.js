@@ -35,11 +35,12 @@ function revealCities(event) {
   let countryName = displayEvent.split("/");
   cityName = countryName[1];
 
-  let cityTimezone = moment().tz(displayEvent);
+  function checkCount() {
+    let cityTimezone = moment().tz(displayEvent);
 
-  let replaceContent = document.querySelector("#bigContainer");
+    let replaceContent = document.querySelector("#bigContainer");
 
-  replaceContent.innerHTML = `
+    replaceContent.innerHTML = `
           <div class="city-name">
              ${cityName}
           </div>
@@ -47,9 +48,11 @@ function revealCities(event) {
           <div class="time">${cityTimezone.format(
             "hh:mm:ss"
           )}<small>${cityTimezone.format(
-    "A"
-  )}</small></div><a href="/" id="back">Go back</a>
+      "A"
+    )}</small></div><a href="/" id="back">Go back</a>
         `;
+  }
+  setInterval(checkCount, 1000);
 }
 
 let selectTab = document.querySelector("#cityLabel");
