@@ -2,14 +2,14 @@ function runDate() {
   let selectLA = document.querySelector("#losAngeles");
   let americaDate = selectLA.querySelector(".date");
   let americaTime = selectLA.querySelector(".time");
-  let timeElement = moment().tz(`America/Los_Angeles`);
+  let timeElement = moment().tz("America/Los_Angeles");
   americaDate.innerHTML = timeElement.format(`MMMM Do, YYYY`);
   americaTime.innerHTML = timeElement.format(`hh:mm:ss  [<small>] A[</small>]`);
 
   let selectParis = document.querySelector("#paris");
   let parisDate = selectParis.querySelector(".date");
   let parisTime = selectParis.querySelector(".time");
-  let paristimeElement = moment().tz(`Europe/Paris`);
+  let paristimeElement = moment().tz("Europe/Paris");
   parisDate.innerHTML = paristimeElement.format(`MMMM Do, YYYY`);
   parisTime.innerHTML = paristimeElement.format(
     `hh:mm:ss [<small>] A[</small>]`
@@ -24,26 +24,34 @@ function runDate() {
     `hh:mm:ss   [<small>] A[</small>]`
   );
 }
-runDate();
+
 setInterval(runDate, 1000);
 
 function revealCities(event) {
   let displayEvent = event.target.value;
+  if (displayEvent === "current") {
+    displayEvent = moment.tz.guess();
+  }
   let countryName = displayEvent.split("/");
   cityName = countryName[1];
+  function checkCount() {
+    let cityTimezone = moment().tz(displayEvent);
 
-  let cityTimezone = moment().tz(displayEvent);
-  let replaceContent = document.querySelector("#bigContainer");
+    let replaceContent = document.querySelector("#bigContainer");
 
-  replaceContent.innerHTML = `<div class="city-name">
+    replaceContent.innerHTML = `<div class="city-name">
             ${cityName} 
           </div>
           <div class="date"> ${cityTimezone.format("MMMM Do, YYYY")}</div>
-          <div class="time">${cityTimezone.format(
+          <div class="time"> ${cityTimezone.format(
             "hh:mm:ss"
-          )}  <small>${cityTimezone.format("A")}</small></div> </div>`;
+          )}  <small>${cityTimezone.format(
+      "A"
+    )}</small></div> <a href="/" id="back">Go back</a>`;
+    return `replaceContent.innerHTML`;
+  }
+  setInterval(checkCount, 1000);
 }
 
 let selectTab = document.querySelector("#cityLabel");
-
 selectTab.addEventListener("change", revealCities);
